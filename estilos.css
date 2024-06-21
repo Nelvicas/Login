@@ -1,0 +1,43 @@
+*{ box-sizing: border-box;}
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+:root{
+    --color-primary: #7656f0;
+}
+
+body{
+    display:grid;
+    place-items: center;
+    margin: 0;
+    height: 100vh;
+    padding: 0 24px;
+    background-color: var(--color-primary);
+    background-image: url("backgroud.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f9f9f9;
+    animation: rotate 6s infinitr alternate linear;
+
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0/35%);
+}
+
+login-card{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 200%;
+    padding: 70px 30px 44px;
+    border-radius: 20px;
+    
+}
